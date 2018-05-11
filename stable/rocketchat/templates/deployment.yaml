@@ -55,8 +55,8 @@ spec:
           httpGet:
             path: /
             port: http
-          initialDelaySeconds: 60
-          timeoutSeconds: 5
+          initialDelaySeconds: {{ default 60 .Values.config.livenessProbe.initialDelaySeconds }}
+          timeoutSeconds: {{ default 5 .Values.config.livenessProbe.timeoutSeconds }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         volumeMounts:

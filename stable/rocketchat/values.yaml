@@ -11,7 +11,7 @@ image: rocket.chat:0.56
 
 ## Host for the application
 ##
-# host:
+host: rocketchat.io-multi.de
 
 # Main RocketChat configuration:
 config:
@@ -29,6 +29,9 @@ config:
   WebRTC_Enable_Channel: false
   WebRTC_Enable_Private: false
   WebRTC_Enable_Direct: false
+  livenessProbe:
+    initialDelaySeconds: 600
+    timeoutSeconds: 5
 
 ##
 ## MongoDB chart configuration
@@ -89,7 +92,8 @@ persistence:
 ### ref : http://kubernetes.io/docs/user-guide/ingress/
 ###
 ingress:
-  enabled: false
-  tls: false
+  enabled: true
+  tls: true
+  secretName: "star.io-multi.de"
   annotations:
     kubernetes.io/ingress.class: "nginx"
