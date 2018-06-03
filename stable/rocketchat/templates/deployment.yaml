@@ -55,8 +55,8 @@ spec:
           httpGet:
             path: /
             port: http
-          initialDelaySeconds: {{ default 60 .Values.config.livenessProbe.initialDelaySeconds }}
-          timeoutSeconds: {{ default 5 .Values.config.livenessProbe.timeoutSeconds }}
+          initialDelaySeconds: {{ default 60 .Values.podconfig.rocketchat.livenessProbe.initialDelaySeconds }}
+          timeoutSeconds: {{ default 5 .Values.podconfig.rocketchat.livenessProbe.timeoutSeconds }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         volumeMounts:

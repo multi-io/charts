@@ -29,9 +29,12 @@ config:
   WebRTC_Enable_Channel: false
   WebRTC_Enable_Private: false
   WebRTC_Enable_Direct: false
-  livenessProbe:
-    initialDelaySeconds: 600
-    timeoutSeconds: 5
+
+podconfig:
+  rocketchat:
+    livenessProbe:
+      initialDelaySeconds: 600
+      timeoutSeconds: 5
 
 ##
 ## MongoDB chart configuration
