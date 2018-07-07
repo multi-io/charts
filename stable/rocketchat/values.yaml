@@ -95,8 +95,7 @@ persistence:
 ### ref : http://kubernetes.io/docs/user-guide/ingress/
 ###
 ingress:
-  enabled: true
-  tls: true
-  secretName: "star.io-multi.de"
+  enabled: false
+  tls: false
   annotations:
     kubernetes.io/ingress.class: "nginx"
