@@ -97,6 +97,6 @@ persistence:
 ingress:
   enabled: true
   tls: true
-  secretName: "rocketchat-io-multi-de-tls"
+  secretName: "rocketchat-io-multi-de-tls-prod"
   annotations:
     kubernetes.io/ingress.class: "nginx"
